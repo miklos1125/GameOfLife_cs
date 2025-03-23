@@ -59,12 +59,12 @@ namespace GameOfLife
                     int cellYLocation = cells[i, j].y * Cell.height;
                     if (cells[i, j].isAlive)
                     {
-                        g.FillRectangle(myBrush, cellXlocation, cellYLocation, Cell.width+1, Cell.height+1);
+                        g.FillEllipse(myBrush, cellXlocation, cellYLocation, Cell.width+1, Cell.height+1);
                     }
-                    else 
-                    {
-                        g.DrawRectangle(myPen, cellXlocation, cellYLocation, Cell.width, Cell.height);
-                    }
+                   // else 
+                   // {
+                        g.DrawEllipse(myPen, cellXlocation, cellYLocation, Cell.width, Cell.height);
+                    //}
                 }
             }
             cellCounter.Text = Cell.population.ToString();

@@ -30,6 +30,8 @@ namespace GameOfLife
             //arrayIndex out of Bounds safety:
             if (x>=cells.GetLength(0)) x = cells.GetLength(0)-1;
             if (y>=cells.GetLength(1)) y = cells.GetLength(1)-1;
+            if (x <= 0) x = 0;
+            if (y <= 0) y = 0;
 
 
             if (e.Button == MouseButtons.Left)

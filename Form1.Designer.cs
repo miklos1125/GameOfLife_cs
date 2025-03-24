@@ -42,6 +42,7 @@
             this.messageLabel = new System.Windows.Forms.Label();
             this.randomizerButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.setInterval)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,9 +50,9 @@
             // 
             this.startButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.startButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.startButton.Location = new System.Drawing.Point(32, 570);
+            this.startButton.Location = new System.Drawing.Point(32, 565);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(75, 41);
+            this.startButton.Size = new System.Drawing.Size(75, 20);
             this.startButton.TabIndex = 1;
             this.startButton.Text = "Start";
             this.startButton.UseVisualStyleBackColor = false;
@@ -185,7 +186,7 @@
             this.randomizerButton.Location = new System.Drawing.Point(591, 565);
             this.randomizerButton.Margin = new System.Windows.Forms.Padding(0);
             this.randomizerButton.Name = "randomizerButton";
-            this.randomizerButton.Size = new System.Drawing.Size(75, 20);
+            this.randomizerButton.Size = new System.Drawing.Size(82, 20);
             this.randomizerButton.TabIndex = 12;
             this.randomizerButton.Text = "Randomizer";
             this.randomizerButton.UseVisualStyleBackColor = false;
@@ -194,13 +195,28 @@
             // clearButton
             // 
             this.clearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(150)))));
-            this.clearButton.Location = new System.Drawing.Point(591, 593);
+            this.clearButton.Location = new System.Drawing.Point(32, 591);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(75, 20);
             this.clearButton.TabIndex = 13;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = false;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(64)))));
+            this.checkBox1.ForeColor = System.Drawing.Color.White;
+            this.checkBox1.Location = new System.Drawing.Point(591, 590);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(82, 17);
+            this.checkBox1.TabIndex = 14;
+            this.checkBox1.Text = "Round cells";
+            this.checkBox1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Form1
             // 
@@ -209,6 +225,7 @@
             this.BackgroundImage = global::GameOfLife.Properties.Resources.cell;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(693, 636);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.randomizerButton);
             this.Controls.Add(this.messageLabel);
@@ -247,6 +264,7 @@
         private System.Windows.Forms.Label messageLabel;
         private System.Windows.Forms.Button randomizerButton;
         private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

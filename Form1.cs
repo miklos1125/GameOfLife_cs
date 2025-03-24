@@ -19,6 +19,7 @@ namespace GameOfLife
         Cell[,] cells = new Cell[67, 54];
         bool[][][] history = new bool[12][][];
         private bool stopModification = false;
+        private bool roundCells = false;
         Graphics g;
         Brush myBrush;
         Pen myPen;
@@ -59,12 +60,23 @@ namespace GameOfLife
                     int cellYLocation = cells[i, j].y * Cell.height;
                     if (cells[i, j].isAlive)
                     {
-                        g.FillEllipse(myBrush, cellXlocation, cellYLocation, Cell.width+1, Cell.height+1);
+                        if (roundCells)
+                        {
+                            g.FillEllipse(myBrush, cellXlocation, cellYLocation, Cell.width, Cell.height);
+                        }
+                        else 
+                        { 
+                            g.FillRectangle(myBrush, cellXlocation, cellYLocation, Cell.width, Cell.height);
+                        }
                     }
-                   // else 
-                   // {
+                    if (roundCells)
+                    {
                         g.DrawEllipse(myPen, cellXlocation, cellYLocation, Cell.width, Cell.height);
-                    //}
+                    }
+                    else 
+                    { 
+                        g.DrawRectangle(myPen, cellXlocation, cellYLocation, Cell.width, Cell.height);
+                    }
                 }
             }
             cellCounter.Text = Cell.population.ToString();

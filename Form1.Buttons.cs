@@ -89,6 +89,11 @@ namespace GameOfLife
             }
         }
 
-        
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            roundCells  = checkBox1.Checked;
+            myPanel.Refresh();
+        }
+
     }
 }

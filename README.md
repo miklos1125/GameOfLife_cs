@@ -6,6 +6,7 @@ In every round:
 - Any live cell with two or three live neighbours lives on to the next generation.
 - Any live cell with more than three live neighbours dies, as if by overpopulation.
 - Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+  
 See programming details after the picture.
 
 ![game_of_life_cs](https://github.com/user-attachments/assets/e9122814-d99d-4c86-a1b6-c4235734382a)

@@ -8,7 +8,7 @@ In every round:
 - Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 See programming details after the picture.
 
-![game_of_life_cs](https://github.com/user-attachments/assets/d5da2b0e-aa60-45b3-971b-c95d0ddd722e)
+![game_of_life_cs](https://github.com/user-attachments/assets/e9122814-d99d-4c86-a1b6-c4235734382a)
 
 This program is written in C#. Years before I've made another version in Java:   https://github.com/miklos1125/GameOfLife
 Since this repository has been created by Visual Studio, it contains tons of auto-generated code. 

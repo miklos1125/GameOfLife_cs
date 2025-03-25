@@ -12,6 +12,7 @@ See programming details after the picture.
 ![game_of_life_cs](https://github.com/user-attachments/assets/45993ea1-65cf-4376-8e4c-87ebc837aed2)
 
 This program is written in C#. Years before I've made another version in Java:   https://github.com/miklos1125/GameOfLife
+
 Since this repository has been created by Visual Studio, it contains tons of auto-generated code. 
 You can find the essential source files with the extension ".cs", I detail their contents below along with the coding challenges.
 

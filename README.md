@@ -9,7 +9,8 @@ In every round:
   
 See programming details after the picture.
 
-![game_of_life_cs](https://github.com/user-attachments/assets/e9122814-d99d-4c86-a1b6-c4235734382a)
+![game_of_life_cs](https://github.com/user-attachments/assets/c251df16-e386-4529-9589-186c0072f6b3)
+
 
 This program is written in C#. Years before I've made another version in Java:   https://github.com/miklos1125/GameOfLife
 Since this repository has been created by Visual Studio, it contains tons of auto-generated code. 

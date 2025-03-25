@@ -18,7 +18,7 @@ namespace GameOfLife
                 clearButton.Enabled = true;
                 randomizerButton.Enabled = true;
             }
-            else
+            else if (Cell.population > 0)
             {
                 this.myPanel.Visible = true;
                 timer1.Start();

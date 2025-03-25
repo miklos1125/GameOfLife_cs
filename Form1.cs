@@ -35,7 +35,7 @@ namespace GameOfLife
             {
                 for (int j = 0; j < cells.GetLength(1); j++)
                 {
-                    cells[i,j] = new Cell(i,j);
+                    cells[i, j] = new Cell(i, j);
                 }
             }
             //initialize history of maps:
@@ -43,6 +43,28 @@ namespace GameOfLife
 
             myBrush = new SolidBrush(Color.Green);
             myPen = new Pen(Color.Black);
+           
+            this.Show();
+            string introduction = "Game of Life "
+                + "is a cellular automaton devised by the British "
+                + "mathematician John Horton Conway in 1970. "
+                + "It is a zero-player game, meaning that its "
+                + "evolution is determined by its initial state, "
+                + "requiring no further input. "
+                + "One interacts with the Game of Life by creating "
+                + "an initial configuration and observing how it evolves.\n\n"
+                + "CREATE YOU OWN CELL STRUCTURE USING THE MOUSE OR THE RANDOMIZER BUTTON!\n\n"
+                + "Operating Rules:\n\n"
+                + "1. Any live cell with fewer than two live neighbours dies, "
+                       + "as if by underpopulation.\n\n"
+               + "2. Any live cell with two or three live neighbours lives on "
+                       + "to the next generation.\n\n"
+               + "3. Any live cell with more than three live neighbours dies, "
+                       + "as if by overpopulation.\n\n"
+               + "4. Any dead cell with exactly three live neighbours becomes "
+                       + "a live cell, as if by reproduction.\n\n"
+               + "(Corner-neighbours matter.)";
+                MessageBox.Show(introduction, "About Game of Life", MessageBoxButtons.OK, MessageBoxIcon.None);
         }
 
 
@@ -50,8 +72,6 @@ namespace GameOfLife
         {
             g = e.Graphics;
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            //      Bitmap buffer = new Bitmap(myPanel.Width, myPanel.Height);
-            //      Graphics beegee = Graphics.FromImage(buffer);
             for (int i = 0; i < cells.GetLength(0); i++)
             {
                 for (int j = 0; j < cells.GetLength(1); j++)
@@ -80,8 +100,7 @@ namespace GameOfLife
                 }
             }
             cellCounter.Text = Cell.population.ToString();
-            IslandCounting();
-            //      g.DrawImage(buffer, 0, 0);
+            IslandCounting();            
         }
 
 
@@ -114,7 +133,7 @@ namespace GameOfLife
                 clearButton.Enabled = true;
                 randomizerButton.Enabled = true;
                 messageLabel.BackColor = Color.FromArgb(185, 168, 240, 157);
-                messageLabel.Text = "Cell structure is repeating in every " +
+                messageLabel.Text = "Cell structure is repeating now in every " +
                                      (repeatsIn > 1 ? repeatsIn + " turns. ":"turn. ") +
                                     "Program stopped.";
                 return;
